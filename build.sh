@@ -20,7 +20,7 @@ declare -r mpc_directory='/tmp/mpc-1.3.1'
 declare -r binutils_tarball='/tmp/binutils.tar.xz'
 declare -r binutils_directory='/tmp/binutils-2.40'
 
-declare -r gcc_tarball='/tmp/gcc.tar.gz'
+declare -r gcc_tarball='/tmp/gcc.tar.xz'
 declare -r gcc_directory='/tmp/gcc-13.2.0'
 
 declare -r optflags='-Os'
@@ -130,20 +130,20 @@ make install
 
 declare -ra targets=(
 	# 'alpha-unknown-linux-gnu'
-	# 'x86_64-unknown-linux-gnu'
+	'x86_64-unknown-linux-gnu'
 	# 'i386-unknown-linux-gnu'
 	# 'arm-unknown-linux-gnueabi'
 	# 'arm-unknown-linux-gnueabihf'
 	# 'hppa-unknown-linux-gnu'
-	# 'aarch64-unknown-linux-gnu'
+	'aarch64-unknown-linux-gnu'
 	# 'mips-unknown-linux-gnu'
-	'mipsel-unknown-linux-gnu'
-	'powerpc-unknown-linux-gnu'
-	's390-unknown-linux-gnu'
-	's390x-unknown-linux-gnu'
-	'sparc-unknown-linux-gnu'
-	'powerpc64le-unknown-linux-gnu'
-	'mips64el-unknown-linux-gnuabi64'
+	# 'mipsel-unknown-linux-gnu'
+	# 'powerpc-unknown-linux-gnu'
+	# 's390-unknown-linux-gnu'
+	# 's390x-unknown-linux-gnu'
+	# 'sparc-unknown-linux-gnu'
+	# 'powerpc64le-unknown-linux-gnu'
+	# 'mips64el-unknown-linux-gnuabi64'
 )
 
 for target in "${targets[@]}"; do
